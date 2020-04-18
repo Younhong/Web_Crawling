@@ -4,7 +4,7 @@ import xmltodict
 
 url = 'http://openapi.11st.co.kr/openapi/OpenApiService.tmall'
 
-params = {'key' : '02be8f6c94d855c354a8037f61789649', 
+params = {'key' : # api key will be kept secret, use your own key, 
         'pageSize': 200, 'apiCode': "ProductSearch", 'keyword': "의류/잡화"}
 response = requests.get(url = url, params = params)
 
