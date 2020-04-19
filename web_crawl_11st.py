@@ -2,10 +2,16 @@ import requests
 import json
 import xmltodict
 
+keyword = input("Enter keyword: ")
+
+### If you enter anything other than clothes, exit
+if (keyword != '??'):
+        exit(0)
+
 url = 'http://openapi.11st.co.kr/openapi/OpenApiService.tmall'
 
-params = {'key' : # api key will be kept secret, use your own key, 
-        'pageSize': 200, 'apiCode': "ProductSearch", 'keyword': "의류/잡화"}
+params = {'key' : 'use your own key', 
+        'pageSize': 200, 'apiCode': "ProductSearch", 'keyword': keyword}
 response = requests.get(url = url, params = params)
 
 data = json.dumps(xmltodict.parse(response.text), ensure_ascii=False, indent=4)
