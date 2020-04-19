@@ -4,10 +4,6 @@ import xmltodict
 
 keyword = input("Enter keyword: ")
 
-### If you enter anything other than clothes, exit
-if (keyword != '의류'):
-        exit(0)
-
 url = 'http://openapi.11st.co.kr/openapi/OpenApiService.tmall'
 
 params = {'key' : 'use your own key', 
